@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="15G1217" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="Match" representedClassName="Match" syncable="YES" codeGenerationType="class">
+        <attribute name="create_date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="created_by" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="last_update_date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="last_updated_by" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="match" optional="YES" attributeType="Decimal" defaultValueString="0" syncable="YES"/>
+        <attribute name="quality" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="reference" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="segment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subject" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tm_properties" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="translation" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="usage_count" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+    </entity>
+    <entity name="ResponseData" representedClassName="ResponseData" syncable="YES" codeGenerationType="class">
+        <attribute name="match" optional="YES" attributeType="Decimal" defaultValueString="0" syncable="YES"/>
+        <attribute name="responderId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="responseDetails" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="responseStatus" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="translatedText" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Translation" representedClassName="Translation" syncable="YES" codeGenerationType="class">
+        <relationship name="matches" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Match" syncable="YES"/>
+        <relationship name="responseData" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="ResponseData" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Match" positionX="-63" positionY="-9" width="128" height="240"/>
+        <element name="Translation" positionX="-54" positionY="0" width="128" height="75"/>
+        <element name="ResponseData" positionX="-36" positionY="9" width="128" height="120"/>
+    </elements>
+</model>
